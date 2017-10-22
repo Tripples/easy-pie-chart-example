@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<!-- Site Title -->
+	<title>Easy Pie Chart Exapmle</title>
+	
+	<!-- CSS
+	================================================== -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+	
+<body>
+
+	<div class="body-inner">
+
+	<section id="easypiechart" class="easypiechart">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="percent-area">
+						<div class="chart" data-percent="71" data-delay="100">
+							<span class="percent"></span>
+							<small>2014</small>
+						</div><!-- Chart end -->
+					</div><!-- Percent area end -->
+				</div><!-- Col 1 end -->
+
+				<div class="col-sm-3">
+					<div class="percent-area">
+						<div class="chart" data-percent="75" data-delay="100">
+							<span class="percent"></span>
+							<small>2015</small>
+						</div><!-- Chart end -->
+					</div><!-- Percent area end -->
+				</div><!-- Col 2 end -->
+
+				<div class="col-sm-3">
+					<div class="percent-area">
+						<div class="chart" data-percent="81" data-delay="100">
+							<span class="percent"></span>
+							<small>2016</small>
+						</div><!-- Chart end -->
+					</div><!-- Percent area end -->
+				</div><!-- Col 3 end -->
+
+				<div class="col-sm-3">
+					<div class="percent-area last">
+						<div class="chart" data-percent="87" data-delay="100">
+							<span class="percent"></span>
+							<small>2017</small>
+						</div><!-- Chart end -->
+					</div><!-- Percent area end -->
+				</div><!-- Col 4 end -->
+
+			</div><!--/ Content row end -->
+
+			<div class="gap-60"></div>
+
+			<div class="text-center">Copyright © 2017 Tripples. All Rights Reserved.</div>
+
+		</div><!--/ Container end -->
+	</section><!-- Facts end -->
+
+	<!-- Javascript Files
+	================================================== -->
+
+	<!-- initialize jQuery Library -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<!-- Bootstrap jQuery -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- Animated Pie chart-->
+	<script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+	<!-- Animated Pie chart Initial -->
+	<script type="text/javascript">
+	$(function() {
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		var chart = window.chart = $('.chart').data('easyPieChart');
+		$('.js_update').on('click', function() {
+			chart.update(Math.random()*200-100);
+		});
+	});
+	</script>
+
+	</div><!-- Body inner end -->
+</body>
+</html>

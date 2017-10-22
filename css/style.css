@@ -1,0 +1,169 @@
+/*
+	
+	
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Lato:400,400i,700,700i,900,900i);
+
+/* Typography
+================================================== */
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+body,
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1c1c24;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+}
+h2 {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+h4 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+}
+h5 {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Global styles
+================================================== */
+
+html {
+    overflow-x: hidden !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-rendering: optimizeLegibility;
+}
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.body-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+a {
+    color: #ff0763;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+a.read-more {
+    color: #ff0763;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+a.read-more:hover {
+    color: #222;
+}
+section,
+.section-padding {
+    padding: 80px 0;
+    position: relative;
+}
+
+.gap-60 {
+    clear: both;
+    height: 60px;
+}
+.gap-40 {
+    clear: both;
+    height: 40px;
+}
+.gap-30 {
+    clear: both;
+    height: 30px;
+}
+.gap-20 {
+    clear: both;
+    height: 20px;
+}
+
+/*-- Chart --*/
+
+.percent-area{
+    border-right: 1px solid #dedede;
+    text-align: center;
+}
+
+.percent-area.last{
+    border-right: 0;
+}
+
+.percent-area .chart {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+
+.percent-area .chart .percent {
+    display: inline-block;
+    line-height: 150px;
+    z-index: 2;
+    font-size: 32px;
+    color: #333;
+}
+
+.percent-area .chart .percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: 24px;
+}
+
+.percent-area .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.percent-area small{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin-top: 15px;
+}
